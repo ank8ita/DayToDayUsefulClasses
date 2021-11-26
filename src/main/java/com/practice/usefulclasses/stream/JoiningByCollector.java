@@ -1,4 +1,4 @@
-package com.practice.usefulclasses;
+package com.practice.usefulclasses.stream;
 
 import java.util.Arrays;
 import java.util.List;
