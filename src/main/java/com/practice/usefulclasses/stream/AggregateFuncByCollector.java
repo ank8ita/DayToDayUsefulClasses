@@ -1,6 +1,7 @@
 package com.practice.usefulclasses.stream;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class AggregateFuncByCollector {
@@ -9,7 +10,7 @@ public class AggregateFuncByCollector {
         //find frequency of each word
         List<String> names = Arrays.asList("bob", "misstee", "noddy", "misstee", "oswald", "noddy", "misstee", "noddy", "misstee");
         Map<String, Long> countByName = names.stream()
-                .collect(Collectors.groupingBy(name -> name, Collectors.counting()));
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println("count by Name:" + countByName);
 
         Map<String, Integer> countByNameInt = names.stream()
